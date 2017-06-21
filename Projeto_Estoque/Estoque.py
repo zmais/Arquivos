@@ -7,8 +7,7 @@ Total = 0.0
 pos = 0
 while True:
     #Ordenando
-    c1 = len(Codigo)
-    for c2 in range(1, c1):
+    for c2 in range(1, len(Codigo)):
         c3 = c2
         while c3 > 0 and Codigo[c3 - 1] > Codigo[c3]:
             temp = Codigo[c3]
@@ -73,7 +72,7 @@ while True:
             print("      ",Codigo[c1] , "            "  , Produtos[c1] , "                "  , Quantidade[c1] , "               " , " R$  %.2f" %Valor[c1] , "     ")
             print(84 * '_')
     elif a == 4:
-        c = input("\nDigite o codigo: ")
+        c = int(input("\nDigite o codigo: "))
         for c1 in range(len(Codigo)):
             if c == Codigo[c1]:
                 igual = True
